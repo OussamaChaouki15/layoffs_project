@@ -126,8 +126,7 @@ WHERE ranking <= 3
 ORDER BY year ASC, total_laid_off DESC;
 
 -- Rolling layoffs total by month
-WITH rolling_total AS (
-    SELECT 
+     SELECT 
         SUBSTRING(date, 1, 7) AS month, 
         SUM(total_laid_off) AS total_off
     FROM layoffs_work 
